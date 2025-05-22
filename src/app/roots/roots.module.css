@@ -1,0 +1,123 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column; /* Main title on top, then content */
+  width: 100%;
+  min-height: 100vh;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #e8eff5; /* Lighter page background */
+}
+
+.mainTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.8em;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row; /* Controls and Canvas side-by-side */
+  gap: 20px;
+  flex-grow: 1; /* Allow wrapper to fill available space */
+  width: 100%;
+  /* Added to ensure the wrapper can shrink if needed and to define a base height */
+  min-height: 0; /* Allows flex children to shrink properly */
+  height: calc(100vh - 70px); /* Example: Adjust based on title/padding */
+}
+
+.controlsColumn {
+  width: 380px; /* Fixed width for controls column */
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow-y: auto; /* Allow scrolling if controls exceed height */
+  /* max-height: calc(100vh - 100px); Removed to rely on parent's height */
+  height: 100%; /* Fill the height of contentWrapper */
+  box-sizing: border-box;
+}
+
+.canvasColumn {
+  flex-grow: 1; /* Canvas takes remaining space */
+  display: flex; /* Use flex to make canvas child fill this container */
+  /* min-height: 450px; Removed to rely on parent's height */
+  background-color: #dde3ea;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Hide anything that might spill from canvas */
+  height: 100%; /* Fill the height of contentWrapper */
+  box-sizing: border-box;
+}
+
+/* Styles for the scrollable container within controlsColumn if needed, but direct styling on controlsColumn is often enough */
+.controlsContainerScrollable {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Increased gap between control groups */
+}
+
+.controlGroup {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+  margin-bottom: 0; /* Gap is handled by parent flex container */
+}
+
+.groupTitle {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.05em;
+  color: #34495e;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Individual control row styling */
+.controlGroup > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px; 
+}
+
+.controlGroup > div:last-child {
+  margin-bottom: 0; /* No margin for the last item in a group */
+}
+
+.controlGroup label {
+  flex-basis: 160px; /* Give labels a consistent base width */
+  flex-shrink: 0;
+  font-weight: 500;
+  font-size: 0.88em;
+  color: #555;
+}
+
+.controlGroup input[type="range"] {
+  flex-grow: 1;
+  margin-right: 5px; /* Space before the value span */
+}
+
+.controlGroup span {
+  min-width: 45px; 
+  text-align: right;
+  font-size: 0.85em;
+  background-color: #f0f0f0;
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: #333;
+}
+
+/* Remove old .container, .title, .controlsContainer, .controls, .canvasContainer if they are fully replaced */
+/* The following are assumed to be replaced or adapted into the new structure */
+/* .container { ... } */
+/* .title { ... } */
+/* .controlsContainer { ... } */
+/* .controls { ... } */
+/* .canvasContainer { ... } */
+/* .controlsGrid { ... } */ /* Replaced by .controlsContainerScrollable and .controlGroup */

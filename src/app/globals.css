@@ -17,7 +17,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: #333; /* Changed to a darker shade for better readability */
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;

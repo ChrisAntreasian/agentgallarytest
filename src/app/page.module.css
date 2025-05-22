@@ -28,10 +28,15 @@
 }
 
 .main {
+  background-color: #4a90e2; /* Muted blue background */
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  min-height: 100vh; /* Full height of the window */
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  justify-content: center;
 }
 
 .main ol {
@@ -165,4 +170,38 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  background-color: #f5a623; /* Muted orange background */
+  padding: 1rem;
+  border-radius: 10px;
+  flex-grow: 1; /* Ensures it stretches to fill available space */
+}
+
+.navButton {
+  background-color: #f8c471; /* Soft orange */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.navButton:hover {
+  background-color: #d68910; /* Slightly darker orange */
+}
+
+.image {
+  border: 4px solid #5dade2; /* Muted blue border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: contain; /* Maintain original aspect ratio */
 }
