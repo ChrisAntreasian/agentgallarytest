@@ -1,0 +1,66 @@
+/* src/components/Header.module.css */
+.header {
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center; /* Center items if they wrap */
+  gap: 1rem; /* Spacing between items */
+}
+
+.navItem {
+  /* No specific styles needed here if using gap */
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navLink:hover,
+.navLink:focus {
+  background-color: #555;
+  outline: none;
+}
+
+/* Optional: Style for the active link if using Next.js router events or similar */
+/* .navLinkActive {
+  background-color: #0070f3;
+  font-weight: bold;
+} */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+  .navList {
+    justify-content: space-around; /* Better distribution on small screens */
+  }
+  .navLink {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

@@ -101,9 +101,9 @@ export default function SmoothMovementGame() {
       innerBorders.forEach((border) => {
         if (
           player.x + 10 > border.x &&
-          player.x - 10 < border.x + board.width &&
+          player.x - 10 < border.x + border.width &&
           player.y + 10 > border.y &&
-          player.y - 10 < border.y + board.height
+          player.y - 10 < border.y + border.height
         ) {
           if (!invulnerable) {
             setInvulnerable(true);
