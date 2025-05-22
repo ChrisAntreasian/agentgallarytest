@@ -101,9 +101,9 @@ export default function SmoothMovementGame() {
       innerBorders.forEach((border) => {
         if (
           player.x + 10 > border.x &&
-          player.x - 10 < border.x + border.width &&
+          player.x - 10 < border.x + board.width &&
           player.y + 10 > border.y &&
-          player.y - 10 < border.y + border.height
+          player.y - 10 < border.y + board.height
         ) {
           if (!invulnerable) {
             setInvulnerable(true);
@@ -171,7 +171,7 @@ export default function SmoothMovementGame() {
     const animationId = requestAnimationFrame(gameLoop);
 
     return () => cancelAnimationFrame(animationId);
-  }, [keys, player]); // Added `player` back to dependencies for smooth animations
+  }, [keys, player, lives, invulnerable]); // Added dependencies to useEffect
 
   const handleKeyDown = (e) => {
     setKeys((prev) => ({ ...prev, [e.key]: true }));
@@ -207,6 +207,8 @@ export default function SmoothMovementGame() {
   return (
     <div style={{ textAlign: 'center', marginTop: '20px' }}> {/* Added space above the canvas and game title */}
       <h1>Smooth Movement Game</h1>
+      <p>Use the <strong>arrow keys</strong> on your keyboard to move the character.</p>
+      <p>Avoid hitting the outer yellow border or the inner obstacles.</p>
       <canvas
         ref={canvasRef}
         width={1200} // Updated canvas width to 1200px
