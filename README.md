@@ -1,6 +1,6 @@
 # Agent Test Gallery
 
-This project is a collection of various interactive web pages and components, primarily used for testing and demonstration purposes with AI agents. Each directory within `src/app` typically represents a distinct test page or feature.
+This project is a collection of various interactive web pages and components, primarily used for testing and demonstration purposes with AI agents. Each directory within `src/app` typically represents a distinct test page or feature. Bap.
 
 ## Pages Overview
 
