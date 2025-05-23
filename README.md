@@ -10,9 +10,7 @@ This project is a collection of various interactive web pages and components, pr
 *   `/drawing-app`: A simple drawing application.
 *   `/game`: A generic game page (content to be defined).
 *   `/hiHo`: A simple page displaying "Hello Github my agent put this here" and some dummy text.
-*   `/hypercube`: A 3D rotating hypercube (tesseract) demonstration.
 *   `/roots`: A page likely demonstrating a tree-like structure or fractal generation (contains `Controls.js` and `Tree.js`).
-*   `/silly-cat`: A page placeholder, content to be defined. (Directory name is "silly cat")
 *   `/todo`: A to-do list application.
 
 ---
@@ -53,4 +51,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
