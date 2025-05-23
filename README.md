@@ -10,9 +10,7 @@ This project is a collection of various interactive web pages and components, pr
 *   `/drawing-app`: A simple drawing application.
 *   `/game`: A generic game page (content to be defined).
 *   `/hiHo`: A simple page displaying "Hello Github my agent put this here" and some dummy text.
-*   `/hypercube`: A 3D rotating hypercube (tesseract) demonstration.
 *   `/roots`: A page likely demonstrating a tree-like structure or fractal generation (contains `Controls.js` and `Tree.js`).
-*   `/silly-cat`: A page placeholder, content to be defined. (Directory name is "silly cat")
 *   `/todo`: A to-do list application.
 
 ---
